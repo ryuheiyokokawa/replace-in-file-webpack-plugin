@@ -83,7 +83,7 @@ ReplaceInFilePlugin.prototype.apply = function (compiler) {
 		const plugin = {
 			name: "ReplaceInFilePlugin"
 		};
-		compiler.hooks.afterCompile.tap(plugin, done);
+		compiler.hooks.compilation.tap(plugin, done);
 	} else {
 		compiler.plugin('done', done);
 	}
